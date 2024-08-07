@@ -28,3 +28,18 @@ else:
     print(f"La cadena de texto modificada es: {cadena_nueva}")
 
 
+# EJERCICIO MANEJO DE STRINGS
+
+import re
+
+def pal_palindroma(frase):
+    frase_limpia = re.sub(r'[^a-zA-Z]', '', frase).lower()
+    return frase_limpia == frase_limpia[::-1]
+
+frase = input("Introduce una frase: ")
+
+for frase in frase:
+    if pal_palindroma(frase):
+        print(f"La frase '{frase}' es palíndroma.")
+    else:
+        print(f"La frase '{frase}' no es palíndroma.")
